@@ -1,0 +1,5 @@
+.blogs-bookmark-container {
+  display: grid;
+  margin-top: 32px;
+  grid-template-columns: 4fr 1fr;
+}
