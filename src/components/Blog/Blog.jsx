@@ -7,6 +7,8 @@ const Blog = (props) => {
   const { name, picture, profile, time, title, publish_date } = props.blog;
   const setBookmark = props.setBookmark;
   const readTime = props.readTime;
+  const notify = () => toast("Wow so easy!");
+
   return (
     <div style={{ width: "845px" }}>
       <img

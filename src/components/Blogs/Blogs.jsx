@@ -2,11 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./Blogs.css";
 import Blog from "../Blog/Blog";
 import Bookmark from "../Bookmark/Bookmark";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [bookmarked, setBookmarked] = useState([]);
   const [readingTime, setReadingTime] = useState(0);
+  const notify = () =>
+    toast.warn("Already Bookmarked!", { position: "top-center" });
+
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -14,9 +19,8 @@ const Blogs = () => {
   }, []);
   const setBookmark = (blog) => {
     const preBookmark = bookmarked.find((bm) => bm._id === blog._id);
-    console.log(preBookmark);
     if (preBookmark) {
-      return alert("already bookmarked");
+      return notify();
     } else {
       const newBookmark = [...bookmarked, blog];
       setBookmarked(newBookmark);
@@ -61,6 +65,7 @@ const Blogs = () => {
           ))}
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
