@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 const Blog = ({ blog }) => {
   console.log(blog);
@@ -25,19 +27,21 @@ const Blog = ({ blog }) => {
                 style={{ color: " rgba(17, 17, 17, 0.6)" }}
                 className="font-semibold"
               >
-                Feb 2 (3 days ago)
+                Mar 20 (11 days ago)
               </p>
             </div>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex items-center">
           <p
             style={{ color: " rgba(17, 17, 17, 0.6)" }}
-            className="font-semibold"
+            className="font-semibold mr-3"
           >
             {time} min read
           </p>
-          <button></button>
+          <button>
+            <FontAwesomeIcon icon={faBookmark} />
+          </button>
         </div>
       </div>
       <h2
@@ -49,6 +53,13 @@ const Blog = ({ blog }) => {
       <p style={{ color: " rgba(17, 17, 17, 0.6)" }} className="font-semibold">
         #beginners #programming
       </p>
+      <button className="px-0 btn btn-link mb-10">Mark as read</button>
+      <hr
+        style={{
+          border: "1px solid rgba(17, 17, 17, 0.15)",
+          marginBottom: "40px",
+        }}
+      />
     </div>
   );
 };
