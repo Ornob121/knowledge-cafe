@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import "./Blog.css";
 
 const Blog = (props) => {
   //   console.log(props.blog);
@@ -10,8 +11,9 @@ const Blog = (props) => {
   const notify = () => toast("Wow so easy!");
 
   return (
-    <div style={{ width: "845px" }}>
+    <div className="background" style={{ width: "845px" }}>
       <img
+        className="background"
         style={{
           height: "450px",
           width: "845px",
@@ -49,7 +51,7 @@ const Blog = (props) => {
         </div>
       </div>
       <h2
-        className="text-4xl font-bold mt-6"
+        className="background text-4xl font-bold mt-6"
         style={{ lineHeight: "64px", width: "737px" }}
       >
         {title}

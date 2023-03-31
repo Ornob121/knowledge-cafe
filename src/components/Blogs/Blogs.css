@@ -3,3 +3,11 @@
   margin-top: 32px;
   grid-template-columns: 3fr 2fr;
 }
+
+@media screen and (max-width: 576px) {
+  .blogs-bookmark-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px, 10px;
+  }
+}

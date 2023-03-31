@@ -1,9 +1,12 @@
 import React from "react";
-
+import "./Header.css";
 const Header = () => {
   return (
     <div>
-      <div className="flex justify-between mx-auto mt-12 mb-12 items-center font-bold">
+      <div
+        className="md:flex md:justify-between mx-auto mt-12 mb-12 items-center font-bold "
+        id="header"
+      >
         <h1 className="text-4xl">Knowledge Cafe</h1>
         <img
           className="h-14 w-14 rounded-full"

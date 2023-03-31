@@ -48,7 +48,11 @@ const Blogs = () => {
         <div className="text-center  sticky top-0">
           <h4
             className="px-10  text-2xl font-bold py-5 rounded-lg"
-            style={{ color: "#6047EC", background: "rgba(96, 71, 236, 0.1)" }}
+            style={{
+              color: "#6047EC",
+              background: "rgba(96, 71, 236, 0.1)",
+              border: "1px solid #6047EC",
+            }}
           >
             Spent time on read: {readingTime} min
           </h4>

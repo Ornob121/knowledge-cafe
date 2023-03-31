@@ -6,3 +6,9 @@ body {
   width: 1280px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 576px) {
+  body {
+    width: 100%;
+  }
+}
