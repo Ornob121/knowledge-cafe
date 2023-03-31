@@ -4,6 +4,7 @@ import Blog from "../Blog/Blog";
 import Bookmark from "../Bookmark/Bookmark";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Answers from "../Answers/Answers";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
