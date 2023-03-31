@@ -2,9 +2,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
-const Blog = ({ blog }) => {
-  console.log(blog);
-  const { name, picture, profile, time, title } = blog;
+const Blog = (props) => {
+  //   console.log(props.blog);
+  const { name, picture, profile, time, title, publish_date } = props.blog;
+  const setBookmark = props.setBookmark;
+  const readTime = props.readTime;
   return (
     <div style={{ width: "845px" }}>
       <img
@@ -27,7 +29,7 @@ const Blog = ({ blog }) => {
                 style={{ color: " rgba(17, 17, 17, 0.6)" }}
                 className="font-semibold"
               >
-                Mar 20 (11 days ago)
+                {publish_date}
               </p>
             </div>
           </div>
@@ -39,7 +41,7 @@ const Blog = ({ blog }) => {
           >
             {time} min read
           </p>
-          <button>
+          <button onClick={() => setBookmark(props.blog)}>
             <FontAwesomeIcon icon={faBookmark} />
           </button>
         </div>
@@ -53,7 +55,12 @@ const Blog = ({ blog }) => {
       <p style={{ color: " rgba(17, 17, 17, 0.6)" }} className="font-semibold">
         #beginners #programming
       </p>
-      <button className="px-0 btn btn-link mb-10">Mark as read</button>
+      <button
+        className="px-0 btn btn-link mb-10"
+        onClick={() => readTime(time)}
+      >
+        Mark as read
+      </button>
       <hr
         style={{
           border: "1px solid rgba(17, 17, 17, 0.15)",
